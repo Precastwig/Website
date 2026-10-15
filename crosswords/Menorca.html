@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Menorca Puzzle</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+<nav>
+<a href="../index.html">Home</a>
+<a href="../RPGs/index.html">RPGs</a>
+<a href="index.html">Crosswords</a>
+<a href="../sudokus/index.html">Sudokus</a>
+</nav>
+</header>
+<main>
+<h1>Menorca Puzzle</h1>
+<a href="Menorca.pdf">Crossword</a> - <a href="MenorcaSolution.pdf">Crossword Solution</a>
+<p>First person to find the banana wins the prize.</p>
+
+<p>Within the crossword there exists a snake, it's path through the crossword must be deduced. 
+The snake moves orthogonally and cannot self-intersect. A clue for the position of the head of the snake is given with the circled cells. A clue for the final position of the snake is given by the shaded cells. You may confirm your deduced start and end positions with Felix once you have completed the grid.</p>
+
+<p>Once found, the snakes path will spell out a sentence when read from start to end.</p>
+
+<p>The snake moves as such:</p>
+<ol class="link-list">
+<li>The snake starts with a lisp noise and turns right before it reaches the penis.</li>
+<li>It immediately takes a turn down a lane of spotty memories.</li>
+<li>Then jumps to obey its masters command, but gets distracted north just before it finishes.</li>
+<li>Reaching a dead end it zig-zags north-east until it reaches, then continues along, in a thrusting motion.</li>
+<li>It doesn't quite reach the E-nd however, as it's worked up a bit of persperation.</li>
+<li>Qué está haciendo?</li>
+<li>It takes its first western movement, and finishes with its friends.</li>
+</ol>
+<p>Where is the Banana?</p>
+
+<form id="answer-form">
+<label for="answer">Enter your answer:</label>
+<input type="text" id="answer" name="answer">
+<button type="submit">Submit</button>
+</form>
+<p id="answer-result"></p>
+
+<script>
+document.getElementById('answer-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var answer = document.getElementById('answer').value.trim().toLowerCase();
+  var result = document.getElementById('answer-result');
+  if (answer === 'cards') {
+    result.textContent = 'Correct!';
+  } else {
+    result.textContent = 'Not quite, try again.';
+  }
+});
+</script>
+</main>
+</body>
+</html>
