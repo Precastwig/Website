@@ -88,6 +88,15 @@ ul.link-list ul.link-list li::marker {
   color: #999;
 }
 
+details.spoiler {
+  font-size: 1em;
+  margin: 1em 0;
+}
+
+details.spoiler summary {
+  cursor: pointer;
+}
+
 .social-links {
   margin-top: 1.5em;
   display: flex;

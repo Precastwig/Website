@@ -17,10 +17,20 @@
 <main>
 <h1>Menorca Puzzle</h1>
 <a href="Menorca.pdf">Crossword</a> - <a href="MenorcaSolution.pdf">Crossword Solution</a>
-<p>First person to find the banana wins the prize.</p>
-
+<details class="spoiler"><summary><b>ERRATA</b> Once you've solved the crossword and are trying to find the snakes path, read this</summary>
+46 Across <i>should</i> read "TEEN" rather than "EENN". Haha oopsie.
+</details>
 <p>Within the crossword there exists a snake, it's path through the crossword must be deduced. 
-The snake moves orthogonally and cannot self-intersect. A clue for the position of the head of the snake is given with the circled cells. A clue for the final position of the snake is given by the shaded cells. You may confirm your deduced start and end positions with Felix once you have completed the grid.</p>
+The snake moves orthogonally and cannot self-intersect. A clue for the position of the head of the snake is given with the circled cells. A clue for the final position of the snake is given by the shaded cells.</p>
+
+<details class="spoiler">
+<summary><b>Solution</b> Snake start location</summary>
+The circled digits read "ONE" down the column and "SEVEN" across the row, so the solution is the first column and seventh row, the start of clue 38. This can be confirmed by the first clue of the snakes path "Starts with a lisp noise", which is "Th".
+</details>
+<details class="spoiler">
+<summary><b>Solution</b> Snake end location</summary>
+The shaded cells read "EYE", and "SPICY"//"ONIONS" which overlap on the "I". Spicy onions are "GARLIC", which is the answer to 55 Across, and "EYE" + "I" overlap tells us it's the I in GARLIC.
+</details>
 
 <p>Once found, the snakes path will spell out a sentence when read from start to end.</p>
 
@@ -34,7 +44,26 @@ The snake moves orthogonally and cannot self-intersect. A clue for the position 
 <li>Qué está haciendo?</li>
 <li>It takes its first western movement, and finishes with its friends.</li>
 </ol>
-<p>Where is the Banana?</p>
+
+<details class="spoiler">
+<summary><b>Solution</b> Snake path</summary>
+Starting at 38 Across:
+<ol class="link-list">
+<li><i>The snake starts with a lisp noise</i>, this is referring to <b>"TH"</b> in <b>"THIRD"</b></li>
+<li><i>and turns right before it reaches the penis.</i>, "the penis" here refers to the <b>"D"</b> in <b>"THIRD"</b>, so we go down at the R</li>
+<li><i>It immediately takes a turn down a lane of spotty memories.</i> this is referring to being a <b>"TEEN"</b></li>
+<li><i>Then jumps to obey its masters command, but gets distracted north just before it finishes.</i>, "Jumps" implies we go up to <b>"HEAL"</b>, stopping before the <b>"L"</b> and heading north</li>
+<li><i>Reaching a dead end it zig-zags north-east until it reaches, then continues along, in a thrusting motion.</i> A thrusting motion is a <b>"LUNGE"</b>, which is directly a couple zig zags away from our previous position</li>
+<li><i>It doesn't quite reach the E-nd however, as it's worked up a bit of persperation.</i>, Stop before the <b>"E"</b> in <b>"LUNGE"</b> and go down to <b>"SWEAT"</b></li>
+<li><i>Qué está haciendo?</i>, Translates to "What is he doing?" in spanish, if we look, we can follow the word <b>"WHAT"</b> from the <b>"W"</b> in <b>"SWEAT"</b></li>
+<li><i>It takes its first western movement, and finishes with its friends.</i>, it's friends here refers to <b>"AMIS"</b> which is where the finishing location is.</li>
+</ol>
+</details>
+<details class="spoiler">
+<summary><b>Solution</b> Snake sentence</summary>
+"THIRTEEN HEARTS NO LUNGS WHAT AM I"
+</details>
+<p>What is the answer?</p>
 
 <form id="answer-form">
 <label for="answer">Enter your answer:</label>
@@ -48,7 +77,7 @@ document.getElementById('answer-form').addEventListener('submit', function(e) {
   e.preventDefault();
   var answer = document.getElementById('answer').value.trim().toLowerCase();
   var result = document.getElementById('answer-result');
-  if (answer === 'cards') {
+  if (answer === 'cards' || answer === 'deck') {
     result.textContent = 'Correct!';
   } else {
     result.textContent = 'Not quite, try again.';
